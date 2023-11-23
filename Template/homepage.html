@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rescisão Trabalhista</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+
+</head>
+<body>
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="header-top">
+                        <div class="logo">
+                            <img src="./img/logo.png" alt="Logo da Empresa" />
+                        </div>
+                        <div class="redes-sociais">
+                            <a href="#">
+                                <img src="./img/rss.png" alt="RSS" />
+                            </a>
+                            <a href="#">
+                                <img src="./img/face.png" alt="Facebook" />
+                            </a>
+                            <a href="#">
+                                <img src="./img/tw.png" alt="Twitter" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-bottom">
+                        <ul class="nav-links">
+                            <li><a href="/">Início</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Rescisão Trabalhista</title>
+    <style>
+        .passo {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Rescisão Trabalhista</h1>
+    <form id="formRescisao" action="/caminho_para_processamento" method="post">
+        <!-- Passo 1: Dados Pessoais -->
+        <div id="passo1" class="passo">
+            <h2>Dados Pessoais</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required pattern="[0-9]{11}"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <button type="button" onclick="avancarParaPasso(2)">Próximo</button>
+        </div>
+
+        <!-- Passo 2: Informações do Contrato -->
+        <div id="passo2" class="passo">
+            <h2>Informações do Contrato</h2>
+            <label for="dataInicio">Data de Início:</label>
+            <input type="date" id="dataInicio" name="dataInicio" required><br>
+            <label for="dataFinal">Data Final:</label>
+            <input type="date" id="dataFinal" name="dataFinal" required><br>
+            <label for="salario">Salário:</label>
+            <input type="number" id="salario" name="salario" required><br>
+            <label for="mesesFeriasVencidas">Meses de Férias Vencidas:</label>
+            <input type="number" id="mesesFeriasVencidas" name="mesesFeriasVencidas" required><br>
+            <label for="motivoRescisao">Motivo da Rescisão:</label>
+            <select id="motivoRescisao" name="motivoRescisao" required>
+                <option value="pedido_demissao">Pedido de Demissão</option>
+                <option value="demissao_sem_justa_causa">Demissão Sem Justa Causa</option>
+                <option value="demissao_com_justa_causa">Demissão Com Justa Causa</option>
+                <option value="termino_contrato_trabalho">Término do Contrato de Trabalho</option>
+            </select><br>
+            <button type="button" onclick="avancarParaPasso(3)">Próximo</button>
+        </div>
+
+        <!-- Passo 3: Confirmação e Envio -->
+        <div id="passo3" class="passo">
+            <h2>Revisão e Envio</h2>
+            <p>Revise as informações e clique em 'Enviar' para calcular a rescisão.</p>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+
+    <script>
+        function avancarParaPasso(passo) {
+            document.querySelectorAll('.passo').forEach(function(el) {
+                el.style.display = 'none';
+            });
+            document.querySelector('#passo' + passo).style.display = 'block';
+        }
+
+        // Iniciando com o Passo 1
+        avancarParaPasso(1);
+    </script>
+</body>
+</html>
+
+</body>
+</html>
