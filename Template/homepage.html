@@ -37,17 +37,6 @@
             </nav>
         </header>
 
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculadora de Rescisão Trabalhista</title>
-    <style>
-        .passo {
-            display: none;
-        }
-    </style>
-</head>
 <body>
     <h1>Calculadora de Rescisão Trabalhista</h1>
     <form id="formRescisao" action="/caminho_para_processamento" method="post">
@@ -91,20 +80,6 @@
             <button type="submit">Enviar</button>
         </div>
     </form>
-
-    <script>
-        function avancarParaPasso(passo) {
-            document.querySelectorAll('.passo').forEach(function(el) {
-                el.style.display = 'none';
-            });
-            document.querySelector('#passo' + passo).style.display = 'block';
-        }
-
-        // Iniciando com o Passo 1
-        avancarParaPasso(1);
-    </script>
 </body>
 </html>
 
-</body>
-</html>

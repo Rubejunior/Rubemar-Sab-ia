@@ -2,18 +2,14 @@ from datetime import datetime
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
 
-app = Flask(__name__)
-
 # route -> site
 # função -> o que você quer
 
-
-
-app = flask.Flask("__name__")
+app = flask.Flask(__name__)
 
 # Rota para a página inicial
 @app.route('/')
-def homepage.html
+def homepage
     return render_template(homepage.html)
 
 
